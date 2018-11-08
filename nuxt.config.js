@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s | 虚無 (仮)',
+    titleTemplate: '%s | ええ感じのブログ (仮)',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -37,6 +37,13 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    }
+  },
+  generate: {
+    routes(callback) {
+      const posts = require('./posts.json')
+      let routes = posts.map(post => `/post/${post.id}`)
+      callback(null, routes)
     }
   }
 }
