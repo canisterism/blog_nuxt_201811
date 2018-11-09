@@ -36,11 +36,11 @@
 </template>
 
 <script>
-  import posts from '~/posts.json'
-  export default {
-    name: 'posts',
-    data () {
-      return { posts }
-    }
+import posts from "~/posts.json";
+export default {
+  name: "posts",
+  data() {
+    return { posts };
   }
+};
 </script>
