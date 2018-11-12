@@ -5,25 +5,25 @@
         Recent Posts.
       </h1>
       <div class="columns is-multiline">
-        <div class="column is-half" v-for="post in posts" :key="post.id">
+        <div class="column is-half" v-for="post in posts" :key="post.slug">
           <div class="card">
            <header class="card-header">
             <p class="card-header-title">
-              {{ post.title }}
+              {{ post.fields.title }}
             </p>
           </header>
           <div class="card-content">
             <div class="content">
-              {{ post.summary }}
+              {{ post.fields.description }}
               <br>
               <small>
                 by <strong>{{ post.author}}</strong>
-                \\ {{ post.published }}
+                \\ {{ post.fields.published }}
               </small>
             </div>
           </div>
           <footer class="card-footer">
-            <nuxt-link :to="`/post/${post.id}`"
+            <nuxt-link :to="`/post/${post.fields.slug}`"
               class="card-footer-item">
               Read More
             </nuxt-link>
@@ -39,8 +39,6 @@
 import posts from "~/posts.json";
 export default {
   name: "posts",
-  data() {
-    return { posts };
-  }
+  props: ["posts"]
 };
 </script>
