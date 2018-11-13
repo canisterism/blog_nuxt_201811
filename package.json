@@ -15,7 +15,8 @@
   "dependencies": {
     "contentful": "^7.0.5",
     "contentful-management": "^5.4.0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue-eslint-editor": "^0.1.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

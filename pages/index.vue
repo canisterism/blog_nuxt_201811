@@ -9,15 +9,6 @@
           <h2 class="subtitle">
             あなたは666人目の訪問者です★キリ番踏み逃げ禁止★
           </h2>
-          <p v-for="post in posts" :key="post.slug">
-            <strong> TITLE: </strong>
-            <br>
-             {{ post.fields.title }}
-             <br>
-            <strong> DESCRIPTION: </strong>
-            <br>
-             {{ post.fields.description }}
-          </p>
         </div>
       </div>
     </section>

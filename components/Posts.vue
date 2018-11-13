@@ -23,7 +23,9 @@
             </div>
           </div>
           <footer class="card-footer">
-            <nuxt-link :to="`/post/${post.fields.slug}`"
+            <nuxt-link
+              :to="`/post/${post.sys.id}`"
+              :post="post.fields"
               class="card-footer-item">
               Read More
             </nuxt-link>
