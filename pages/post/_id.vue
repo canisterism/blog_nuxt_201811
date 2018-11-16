@@ -1,10 +1,10 @@
 <template>
   <div class="main-content">
-    <div class="container">
-      <h2 class="title is-2">{{ entry.title}}</h2>
-      <h5 class="is-8">{{ entry.published }}</h5>
-      <h5 class="is-8">{{ entry.description }}</h5>
-      <div v-html="markdown(entry.body)"></div>
+    <div class="container column is-4">
+      <h2 class="title">{{ entry.title}}</h2>
+      <h5 class="subtitle">{{ entry.published }}</h5>
+      <h5 class="subtitle">{{ entry.description }}</h5>
+      <div class="content" v-html="markdown(entry.body)"></div>
     </div>
   </div>
 </template>
@@ -35,5 +35,5 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 </style>
