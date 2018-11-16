@@ -38,7 +38,6 @@
 </template>
 
 <script>
-import posts from "~/posts.json";
 export default {
   name: "posts",
   props: ["posts"]

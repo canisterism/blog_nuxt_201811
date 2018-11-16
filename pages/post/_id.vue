@@ -1,19 +1,16 @@
-<template lang="md">
+<template>
   <div class="main-content">
     <div class="container">
       <h2 class="title is-2">{{ entry.title}}</h2>
-      <h5 class="title is-8">{{ entry.published }}</h5>
-      <h4 class="title is-8">{{ entry.description }}</h4>
-      <div v-for="(paragraph,index) in entry.body.content":key="index">
-        <div lang="md" v-html="paragraph.content[0].value"></div>
-        <br>
-        <br>
-        <br>
-      </div>
+      <h5 class="is-8">{{ entry.published }}</h5>
+      <h5 class="is-8">{{ entry.description }}</h5>
+      <div v-html="markdown(entry.body)"></div>
     </div>
-  </div></template>
+  </div>
+</template>
 
 <script>
+import marked from "marked";
 const createClient = require("~/plugins/contentful.js");
 const client = createClient.default();
 
@@ -29,6 +26,11 @@ export default {
         };
       })
       .catch(console.error);
+  },
+  methods: {
+    markdown: function(text) {
+      return marked(text);
+    }
   }
 };
 </script>

@@ -17,6 +17,7 @@
     "contentful": "^7.0.5",
     "contentful-management": "^5.4.0",
     "markdown-it-highlightjs": "^3.0.0",
+    "marked": "^0.5.1",
     "nuxt": "^2.0.0",
     "vue-eslint-editor": "^0.1.2"
   },
