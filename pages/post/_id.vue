@@ -1,6 +1,9 @@
 <template>
   <div class="main-content">
-    <div class="container column is-4">
+    <div class="container column is-5">
+      <div class="hero-body">
+        <img :src="heroImage" alt="">
+      </div>
       <h2 class="title">{{ entry.title}}</h2>
       <h5 class="subtitle">{{ entry.published }}</h5>
       <h5 class="subtitle">{{ entry.description }}</h5>
@@ -30,6 +33,11 @@ export default {
   methods: {
     markdown: function(text) {
       return marked(text);
+    }
+  },
+  computed: {
+    heroImage: function() {
+      return this.entry.heroImage.fields.file.url;
     }
   }
 };

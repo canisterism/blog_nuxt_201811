@@ -1,11 +1,11 @@
 <template>
   <section class="main-content">
-    <div class="container">
+    <div class="container column is-5">
       <h1 class="title has-text-centered">
         Recent Posts.
       </h1>
       <div class="columns is-multiline">
-        <div class="column is-half" v-for="post in posts" :key="post.slug">
+        <div class="" v-for="post in posts" :key="post.slug">
           <div class="card">
            <header class="card-header">
             <p class="card-header-title">
