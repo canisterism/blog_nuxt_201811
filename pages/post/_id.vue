@@ -4,7 +4,7 @@
       <div class="hero-body">
         <img :src="heroImage" alt="">
       </div>
-      <h2 class="title">{{ entry.title}}</h2>
+      <h2 class="title">{{ entry.title }}</h2>
       <h5 id="pusblished" class="subtitle">{{ entry.published | moment }}</h5>
       <div class="content" v-html="markdown(entry.body)"></div>
     </div>

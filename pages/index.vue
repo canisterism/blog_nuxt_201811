@@ -1,17 +1,5 @@
 <template>
-  <div class="container column is-5">
-    <section class="hero is-medium is-primary is-bold">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            ええ感じのブログ
-          </h1>
-          <h2 class="subtitle">
-            あなたは666人目の訪問者です★キリ番踏み逃げ禁止★
-          </h2>
-        </div>
-      </div>
-    </section>
+  <div class="container column is-8">
     <posts :posts="posts"/>
   </div>
 </template>
@@ -51,5 +39,8 @@ export default {
   }
 };
 </script>
-
 <style>
+img {
+  width: 100%;
+  height: auto;
+}
