@@ -5,8 +5,7 @@
         <img :src="heroImage" alt="">
       </div>
       <h2 class="title">{{ entry.title}}</h2>
-      <h5 class="subtitle">{{ entry.published }}</h5>
-      <h5 class="subtitle">{{ entry.description }}</h5>
+      <h5 id="pusblished" class="subtitle">{{ entry.published | moment }}</h5>
       <div class="content" v-html="markdown(entry.body)"></div>
     </div>
   </div>
@@ -14,6 +13,8 @@
 
 <script>
 import marked from "marked";
+import moment from "~/utils/filters";
+
 const createClient = require("~/plugins/contentful.js");
 const client = createClient.default();
 
@@ -43,5 +44,6 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang=sass>
+#pusblished {color: hsl(0, 0%, 71%)}
 </style>

@@ -18,6 +18,8 @@
     "contentful-management": "^5.4.0",
     "markdown-it-highlightjs": "^3.0.0",
     "marked": "^0.5.1",
+    "moment": "^2.22.2",
+    "momentjs": "^2.0.0",
     "nuxt": "^2.0.0",
     "vue-eslint-editor": "^0.1.2"
   },
@@ -26,6 +28,9 @@
     "eslint": "^4.19.1",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.1.1",
-    "eslint-plugin-vue": "^4.0.0"
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.10.0",
+    "nodemon": "^1.18.6",
+    "sass-loader": "^7.1.0"
   }
 }

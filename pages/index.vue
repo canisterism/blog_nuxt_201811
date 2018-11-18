@@ -21,6 +21,7 @@ const createClient = require("~/plugins/contentful.js");
 const client = createClient.default();
 
 import Posts from "~/components/Posts.vue";
+import moment from "~/utils/filters";
 
 export default {
   components: {

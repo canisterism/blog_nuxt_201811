@@ -18,7 +18,7 @@
               <br>
               <small>
                 by <strong>{{ post.author}}</strong>
-                \\ {{ post.fields.published }}
+                \\ {{ post.fields.published | moment }}
               </small>
             </div>
           </div>
