@@ -13,10 +13,8 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@nuxtjs/markdownit": "^1.2.2",
     "contentful": "^7.0.5",
     "contentful-management": "^5.4.0",
-    "markdown-it-highlightjs": "^3.0.0",
     "marked": "^0.5.1",
     "moment": "^2.22.2",
     "momentjs": "^2.0.0",
