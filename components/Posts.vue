@@ -60,4 +60,9 @@ img {
 .card {
   margin-bottom: 1rem;
 }
+
+.hero {
+  border-bottom: #e1e3e8 solid 1px;
+  border-top: #e1e3e8 solid 1px;
+}
 </style>
