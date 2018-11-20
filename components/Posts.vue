@@ -13,7 +13,12 @@
             </p>
           </header>
             <section class="hero">
+            <nuxt-link
+              :to="`/post/${post.sys.id}`"
+              :post="post.fields"
+              style="display: block;">
               <img :src="post.fields.heroImage.fields.file.url" alt="">
+            </nuxt-link>
             </section>
           <div class="card-content">
             <div class="content">
