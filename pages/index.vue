@@ -12,6 +12,9 @@ import Posts from "~/components/Posts.vue";
 import moment from "~/utils/filters";
 
 export default {
+  head: {
+    title: "Top"
+  },
   components: {
     Posts
   },

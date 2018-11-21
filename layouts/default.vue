@@ -17,7 +17,14 @@
     <!-- displays page content -->
     <nuxt/>
 
+    <div class="footer has-text-centered">
+      <div class="copyright">Copyright © 2018 canister All Rights Reserved.</div>
+    </div>
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
+#copyright {
+  color: #6666;
+}
+</style>
