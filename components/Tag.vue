@@ -2,7 +2,7 @@
   <span class="tag">
     <nuxt-link
       :to="`/`">
-      {{ label }}
+      #{{ label }}
     </nuxt-link>
   </span>
 

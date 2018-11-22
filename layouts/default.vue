@@ -13,7 +13,7 @@
       </div>
     </nav>
     <!-- /navigation -->
-    <transition name="fade">
+    <transition>
       <nuxt/>
     </transition>
     <div class="footer has-text-centered">
@@ -32,21 +32,21 @@ transtion {
 }
 /* 表示するときはゆっくり＠文字色だけアニメーションさせない */
 /* 遷移中は文字色を透明にしとく */
-.fade-enter-active {
+.v-enter-active {
   color: transparent;
   transition: all 1s, color 0s;
 }
 /* 消えるときは素早く */
-.fade-leave-active {
+.v-leave-active {
   transition: all 0.5s;
 }
 /* 表示するときは透明度0の左側から */
-.fade-enter {
+.v-enter {
   opacity: 0;
   transform: translateX(-50px);
 }
 /* 消えるときは透明度0の左側へ */
-.fade-leave-to {
+.v-leave-to {
   opacity: 0;
   transform: translateX(50px);
 }
