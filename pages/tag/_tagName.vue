@@ -1,6 +1,6 @@
 <template>
   <div class="container column is-8">
-    <div class="title">最近の投稿</div>
+    <div class="title">タグ検索結果一覧</div>
     <posts :posts="posts"/>
   </div>
 </template>
@@ -8,19 +8,15 @@
 <script>
 const createClient = require("~/plugins/contentful.js");
 const client = createClient.default();
-
 import Posts from "~/components/Posts.vue";
 import moment from "~/utils/filters";
 
 export default {
   head: {
-    title: "Top"
+    title: "tagName"
   },
-  components: {
-    Posts
-  },
-  // `env` is available in the context object
-  asyncData({ env }) {
+  components: { Posts },
+  asyncData({ params, env }) {
     return Promise.all([
       // fetch the owner of the blog
       client.getEntries({
@@ -29,7 +25,8 @@ export default {
       // fetch all blog posts sorted by creation date
       client.getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
-        order: "-sys.createdAt"
+        order: "-sys.createdAt",
+        "fields.tags": params.tagName
       })
     ])
       .then(([entries, posts]) => {
@@ -40,12 +37,12 @@ export default {
         };
       })
       .catch(console.error);
+  },
+  mounted: function() {
+    console.debug(this.posts);
   }
 };
 </script>
 
-<style>
-img {
-  width: 100%;
-  height: auto;
-}
+<style lang="scss" scoped>
+</style>

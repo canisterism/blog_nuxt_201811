@@ -1,11 +1,9 @@
 <template>
   <span class="tag">
-    <nuxt-link
-      :to="`/`">
+    <nuxt-link :to="'/tag/'+label">
       #{{ label }}
     </nuxt-link>
   </span>
-
 </template>
 
 <script>

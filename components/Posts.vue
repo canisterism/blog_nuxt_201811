@@ -1,9 +1,6 @@
 <template>
   <section class="main-content">
     <div class="container column is-6">
-      <h1 class="title has-text-centered">
-        Recent Posts
-      </h1>
       <div class="columns is-multiline">
         <div class="" v-for="post in posts" :key="post.slug">
           <div class="card is-full">
