@@ -10,13 +10,18 @@
           <p class="is-size-5 has-text-grey">東京で働くwebエンジニアです。</p>
           <p class="is-size-5 has-text-grey">RubyやVueを書いています。</p>
         </div>
-        <div class="sns_icons_area level is-full m-t-sm">
+        <div class="sns_icons_area level is-full m-t-sm ">
           <div class="level-left">
-            <span class="icon is-medium level-item">
-              <i class="fab fa-twitter fa-lg"><a href="https://twitter.com/canisterism"></a></i>
+            <span class="icon is-medium level-item has-text-black">
+              <a href="https://twitter.com/canisterism">
+                <i class="fab fa-twitter fa-lg"></i>
+              </a>
             </span>
-            <span class="icon is-medium level-item">
-              <i class="fab fa-github fa-lg"><a href="https://github.com/canisterism"></a></i>
+            <span class="icon is-medium level-item has-text-black">
+              <a href="https://github.com/canisterism">
+                <i class="fab fa-github fa-lg">
+                </i>
+              </a>
             </span>
           </div>
         </div>
