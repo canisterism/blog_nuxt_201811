@@ -4,9 +4,10 @@ module.exports = {
    */
   head: {
     titleTemplate: '%s | ええ感じのブログ (仮)',
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8',
-        description: '東京でWebエンジニアをしているきゃにすたーのブログ'
+        description: ''
       },
       {
         name: 'viewport',
@@ -18,7 +19,8 @@ module.exports = {
         content: 'blog with nuxt.js'
       }
     ],
-    link: [{
+    link: [
+      {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
@@ -26,6 +28,12 @@ module.exports = {
       {
         rel: 'stylesheet',
         href: 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.6.1/css/all.css',
+        integrity: "sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP",
+        crossorigin: "anonymous"
       }
     ]
   },
@@ -64,6 +72,9 @@ module.exports = {
       }
     }
   },
+  css: [
+    '@/assets/css/spacing.scss',
+  ],
   env: {
     CTF_SPACE_ID: process.env.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN,

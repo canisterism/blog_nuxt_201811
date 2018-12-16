@@ -17,7 +17,7 @@ export default {
     title: "Top"
   },
   components: {
-    Posts
+    posts: Posts
   },
   // `env` is available in the context object
   asyncData({ env }) {

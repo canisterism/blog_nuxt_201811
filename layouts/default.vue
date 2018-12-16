@@ -16,11 +16,23 @@
     <transition>
       <nuxt/>
     </transition>
-    <div class="footer has-text-centered">
-      <div class="copyright">Copyright © 2018 canister All Rights Reserved.</div>
+    <div class="footer">
+      <div class="column is-6 is-offset-3 has-text-centered ">
+        <aboutMe></aboutMe>
+        <div class="copyright">Copyright © 2018 canister All Rights Reserved.</div>
+      </div>
     </div>
   </div>
 </template>
+<script>
+import aboutMe from "~/components/AboutMe.vue";
+
+export default {
+  components: {
+    aboutMe: aboutMe
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 #copyright {
