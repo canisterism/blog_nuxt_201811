@@ -4,8 +4,7 @@ module.exports = {
    */
   head: {
     titleTemplate: '%s | ええ感じのブログ (仮)',
-    meta: [
-      {
+    meta: [{
         charset: 'utf-8',
         description: ''
       },
@@ -19,8 +18,7 @@ module.exports = {
         content: 'blog with nuxt.js'
       }
     ],
-    link: [
-      {
+    link: [{
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
