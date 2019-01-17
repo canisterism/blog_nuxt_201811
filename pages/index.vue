@@ -21,18 +21,12 @@ export default {
   },
   // `env` is available in the context object
   asyncData({ env }) {
-    return Promise.all([
-      // fetch the owner of the blog
-      client.getEntries({
-        "sys.id": env.CTF_PERSON_ID
-      }),
-      // fetch all blog posts sorted by creation date
-      client.getEntries({
+    return client
+      .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
         order: "-sys.createdAt"
       })
-    ])
-      .then(([entries, posts]) => {
+      .then(posts => {
         // return data that should be available
         // in the template
         return {
